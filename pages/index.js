@@ -31,15 +31,20 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="mx-auto max-w-4xl">
+        <div className="max-w-4xl mx-auto">
           <form onSubmit={handleSubmit}>
             <input onChange={handleChange} />
             <button>Search</button>
           </form>
           <div className="relative">
             {album && (
-              <div className="absolute bottom-[34%] left-[12%] z-10 transform skew-x-[22deg] skew-y-[-11deg]">
-                <Image src={album} alt="" height={68} width={68} />
+              <div
+                className="absolute bottom-[34.5%] left-[11%] z-10"
+                style={{
+                  transform: `rotateX(33deg) rotateZ(-16deg) rotateY(4deg)`,
+                }}
+              >
+                <Image src={album} alt="" height={76} width={76} />
               </div>
             )}
             <Image src={Jimpod} alt="Jim Halpert listening to an iPod." />
